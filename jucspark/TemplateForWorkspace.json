@@ -124,7 +124,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "b3d5d3d0-638b-4c49-9292-3d33cf52ef1d"
+						"spark.autotune.trackingId": "ecffd488-b214-483b-91bb-325b0847b812"
 					}
 				},
 				"metadata": {
@@ -175,7 +175,7 @@
 							}
 						},
 						"source": [
-							"Test 123"
+							"Test 4"
 						]
 					},
 					{
@@ -186,7 +186,7 @@
 							"spark.sql(\"CREATE TABLE cities (name STRING, population INT) USING PARQUET\")"
 						],
 						"outputs": [],
-						"execution_count": 16
+						"execution_count": 20
 					},
 					{
 						"cell_type": "markdown",
@@ -203,7 +203,7 @@
 							"spark.sql(\"INSERT INTO cities VALUES ('Seattle', 730400), ('San Francisco', 881549), ('Beijing', 21540000), ('Bangalore', 10540000)\")"
 						],
 						"outputs": [],
-						"execution_count": 17
+						"execution_count": 21
 					},
 					{
 						"cell_type": "markdown",
@@ -244,7 +244,7 @@
 							"display(spark.sql(\"SELECT * FROM cities ORDER BY name\"))"
 						],
 						"outputs": [],
-						"execution_count": 18
+						"execution_count": 22
 					},
 					{
 						"cell_type": "markdown",
@@ -261,7 +261,7 @@
 							"spark.sql(\"DROP TABLE cities\")"
 						],
 						"outputs": [],
-						"execution_count": 19
+						"execution_count": 23
 					}
 				]
 			},
@@ -285,14 +285,11 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "ff8b9bfb-87ff-4516-8f73-ac61f601a53e"
+						"spark.autotune.trackingId": "3037cfcb-518b-4c06-938f-7d199b30b5f4"
 					}
 				},
 				"metadata": {
 					"saveOutput": true,
-					"synapse_widget": {
-						"version": "0.1"
-					},
 					"enableDebugMode": false,
 					"kernelspec": {
 						"name": "synapse_pyspark",
@@ -306,10 +303,12 @@
 				"cells": [
 					{
 						"cell_type": "code",
+						"metadata": {},
 						"source": [
 							"%sh "
 						],
-						"outputs": []
+						"outputs": [],
+						"execution_count": null
 					}
 				]
 			},
