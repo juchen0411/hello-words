@@ -18,72 +18,11 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "45a4557d-6ae5-4fa6-aec0-df324b3b73ee"
+				"spark.autotune.trackingId": "980ab17b-f5ef-4308-a452-59f3eb61e83f"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1",
-				"state": {
-					"71a13a52-cacf-4c83-8e62-b964bc624043": {
-						"type": "Synapse.DataFrame",
-						"sync_state": {
-							"table": {
-								"rows": [
-									{
-										"0": "Bangalore",
-										"1": "10540000"
-									},
-									{
-										"0": "Beijing",
-										"1": "21540000"
-									},
-									{
-										"0": "San Francisco",
-										"1": "881549"
-									},
-									{
-										"0": "Seattle",
-										"1": "730400"
-									}
-								],
-								"schema": [
-									{
-										"key": "0",
-										"name": "name",
-										"type": "string"
-									},
-									{
-										"key": "1",
-										"name": "population",
-										"type": "int"
-									}
-								],
-								"truncated": false
-							},
-							"isSummary": false,
-							"language": "scala"
-						},
-						"persist_state": {
-							"view": {
-								"type": "details",
-								"chartOptions": {
-									"chartType": "bar",
-									"aggregationType": "sum",
-									"categoryFieldKeys": [
-										"0"
-									],
-									"seriesFieldKeys": [
-										"1"
-									],
-									"isStacked": false
-								}
-							}
-						}
-					}
-				}
-			},
 			"enableDebugMode": false,
 			"kernelspec": {
 				"name": "synapse_pyspark",
@@ -99,14 +38,13 @@
 				"endpoint": "https://jucspark.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/SampleSpark",
 				"auth": {
 					"type": "AAD",
-					"authResource": "https://dev.azuresynapse.net",
-					"authHeader": null
+					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "3.2",
 				"nodeCount": 3,
 				"cores": 8,
 				"memory": 56,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -121,11 +59,25 @@
 				]
 			},
 			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"Test 123"
+				]
+			},
+			{
 				"cell_type": "code",
 				"source": [
+					"//Test123\r\n",
 					"spark.sql(\"CREATE TABLE cities (name STRING, population INT) USING PARQUET\")"
 				],
-				"execution_count": 7
+				"execution_count": 12
 			},
 			{
 				"cell_type": "markdown",
@@ -139,7 +91,7 @@
 				"source": [
 					"spark.sql(\"INSERT INTO cities VALUES ('Seattle', 730400), ('San Francisco', 881549), ('Beijing', 21540000), ('Bangalore', 10540000)\")"
 				],
-				"execution_count": 8
+				"execution_count": 13
 			},
 			{
 				"cell_type": "markdown",
@@ -178,7 +130,7 @@
 				"source": [
 					"display(spark.sql(\"SELECT * FROM cities ORDER BY name\"))"
 				],
-				"execution_count": 9
+				"execution_count": 14
 			},
 			{
 				"cell_type": "markdown",
@@ -192,7 +144,7 @@
 				"source": [
 					"spark.sql(\"DROP TABLE cities\")"
 				],
-				"execution_count": 11
+				"execution_count": 15
 			}
 		]
 	}
