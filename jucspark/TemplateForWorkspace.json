@@ -124,7 +124,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "757dbd7e-0310-487c-b66d-04c278d8ff25"
+						"spark.autotune.trackingId": "b3d5d3d0-638b-4c49-9292-3d33cf52ef1d"
 					}
 				},
 				"metadata": {
@@ -186,7 +186,7 @@
 							"spark.sql(\"CREATE TABLE cities (name STRING, population INT) USING PARQUET\")"
 						],
 						"outputs": [],
-						"execution_count": 12
+						"execution_count": 16
 					},
 					{
 						"cell_type": "markdown",
@@ -203,7 +203,7 @@
 							"spark.sql(\"INSERT INTO cities VALUES ('Seattle', 730400), ('San Francisco', 881549), ('Beijing', 21540000), ('Bangalore', 10540000)\")"
 						],
 						"outputs": [],
-						"execution_count": 13
+						"execution_count": 17
 					},
 					{
 						"cell_type": "markdown",
@@ -244,7 +244,7 @@
 							"display(spark.sql(\"SELECT * FROM cities ORDER BY name\"))"
 						],
 						"outputs": [],
-						"execution_count": 14
+						"execution_count": 18
 					},
 					{
 						"cell_type": "markdown",
@@ -261,7 +261,7 @@
 							"spark.sql(\"DROP TABLE cities\")"
 						],
 						"outputs": [],
-						"execution_count": 15
+						"execution_count": 19
 					}
 				]
 			},
@@ -332,7 +332,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "d549b754-2833-43d3-9f24-343f825f68e5"
+						"spark.autotune.trackingId": "a4456191-aafb-4438-8e5a-abf7643021d2"
 					}
 				},
 				"metadata": {
@@ -350,7 +350,6 @@
 				"cells": [
 					{
 						"cell_type": "code",
-						"metadata": {},
 						"source": [
 							""
 						],
